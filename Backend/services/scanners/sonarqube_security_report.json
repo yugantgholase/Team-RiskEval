@@ -1,0 +1,298 @@
+{
+  "generated_at": "2025-05-25T02:50:29.882745",
+  "projects": [
+    {
+      "project_name": "data ingest monitoring",
+      "project_key": "data-ingest-monitoring",
+      "vulnerabilities": [],
+      "hotspots": [
+        {
+          "key": "089bcaad-4b70-4d96-9dba-b3b1178989d7",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:source/data-ingest/test/LandingComponent.react.test.js",
+          "message": "\"token\" detected here, make sure this is not a hard-coded secret.",
+          "rule": "javascript:S6418",
+          "line": 40,
+          "creation_date": "2023-02-20T15:40:34+0530"
+        },
+        {
+          "key": "9e034fc4-e1c8-4145-996d-47f69452794c",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:source/data-ingest/test/LandingComponent.react.test.js",
+          "message": "\"token\" detected here, make sure this is not a hard-coded secret.",
+          "rule": "javascript:S6418",
+          "line": 63,
+          "creation_date": "2023-02-20T15:40:34+0530"
+        },
+        {
+          "key": "09c3a4ff-df18-463e-bd2a-8033f729444e",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:source/data-ingest/test/ProjectForm.react.test.js",
+          "message": "\"token\" detected here, make sure this is not a hard-coded secret.",
+          "rule": "javascript:S6418",
+          "line": 37,
+          "creation_date": "2023-02-27T14:56:52+0530"
+        },
+        {
+          "key": "9d84b6f2-b420-4b57-875a-d3e598dfa430",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:source/data-ingest/test/ProjectForm.react.test.js",
+          "message": "\"token\" detected here, make sure this is not a hard-coded secret.",
+          "rule": "javascript:S6418",
+          "line": 96,
+          "creation_date": "2023-02-27T14:56:52+0530"
+        },
+        {
+          "key": "70218cbd-ad88-45ea-a8d9-ef3776c1f955",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:source/data-ingest/test/ProjectForm.react.test.js",
+          "message": "\"token\" detected here, make sure this is not a hard-coded secret.",
+          "rule": "javascript:S6418",
+          "line": 154,
+          "creation_date": "2023-04-12T11:23:55+0530"
+        },
+        {
+          "key": "d6b734b3-48f8-411e-b8ba-83f1a5f9aee1",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/apigateway.yaml",
+          "message": "Make sure creating a public API is safe here.",
+          "rule": "cloudformation:S6333",
+          "line": 330,
+          "creation_date": "2023-07-13T14:03:40+0530"
+        },
+        {
+          "key": "af45090f-0832-4941-b790-633874d0919b",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/apigateway.yaml",
+          "message": "Make sure creating a public API is safe here.",
+          "rule": "cloudformation:S6333",
+          "line": 387,
+          "creation_date": "2023-07-13T14:03:40+0530"
+        },
+        {
+          "key": "f6c57a50-6d55-4c88-aae0-bbb5e4d64b02",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/apigateway.yaml",
+          "message": "Make sure creating a public API is safe here.",
+          "rule": "cloudformation:S6333",
+          "line": 465,
+          "creation_date": "2023-07-13T14:03:40+0530"
+        },
+        {
+          "key": "0c560ff4-8910-4571-9d0f-8bd2d303a79b",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/apigateway.yaml",
+          "message": "Make sure creating a public API is safe here.",
+          "rule": "cloudformation:S6333",
+          "line": 524,
+          "creation_date": "2025-04-14T13:00:59+0530"
+        },
+        {
+          "key": "62ca6dda-11d8-4312-aad9-5167dad22b5b",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/apigateway.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 116,
+          "creation_date": "2025-04-14T13:00:59+0530"
+        },
+        {
+          "key": "8022a48a-f91a-4059-92be-33d83d0a88d7",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/apigateway.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 124,
+          "creation_date": "2025-04-14T13:00:59+0530"
+        },
+        {
+          "key": "61b9ca1c-5425-422d-bc1a-c6cb16d560c9",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/apigateway.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 220,
+          "creation_date": "2025-04-14T13:00:59+0530"
+        },
+        {
+          "key": "c4913603-d362-446e-ae6e-9679a174db03",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/apigateway.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 228,
+          "creation_date": "2025-04-14T13:00:59+0530"
+        },
+        {
+          "key": "33eb44be-0674-4d96-9bd3-10c5169f0ada",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/dimfargate.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 82,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "47725ea6-2e3a-4330-9847-f2ec260e8b03",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/dimfargate.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 100,
+          "creation_date": "2024-09-19T17:59:02+0530"
+        },
+        {
+          "key": "2e93592c-737e-4361-82f7-d06d97cfd341",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/dimfargate.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 217,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "19e4add9-5afa-4f83-bdd5-8ee62904bcd7",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/dimfargate.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 237,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "9b142bdf-9416-46bc-a429-5d465087d852",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lambda-scanner.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 74,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "3b014b02-b6f6-4058-ad21-ee7b5d798243",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lambda-scanner.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 83,
+          "creation_date": "2024-09-26T13:55:09+0530"
+        },
+        {
+          "key": "9565c427-cb20-43a0-8326-6ff846348247",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lambda-ses.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 79,
+          "creation_date": "2023-07-13T14:03:40+0530"
+        },
+        {
+          "key": "9779885f-5a27-45a2-b56c-0677e2415ffe",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lambda-ses.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 83,
+          "creation_date": "2024-12-03T16:06:48+0530"
+        },
+        {
+          "key": "b8e92db5-548c-43d2-9347-b64324af1fb2",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lambda-ses.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 85,
+          "creation_date": "2025-04-14T13:00:59+0530"
+        },
+        {
+          "key": "5f10c466-ffa6-43d6-8a48-1ffca7b08138",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lzinventoryfargate.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 86,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "670b7f8e-cb80-4782-9eac-d13f5f83bc6d",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lzinventoryfargate.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 214,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "163f476b-bb3a-4364-abfb-39e8196bbc1d",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lzinventoryfargate.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 234,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "3de28fd1-0bb8-4012-97e7-74655a5eb1a5",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lzinventorylambda.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 102,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "becc8de9-c637-4288-9874-28efd9afaac7",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lzinventorylambda.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 125,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "80a18d28-fea0-495b-90b8-ac44fa23e593",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:cform/lzinventorylambda.yaml",
+          "message": "Make sure granting access to all resources is safe here.",
+          "rule": "cloudformation:S6304",
+          "line": 220,
+          "creation_date": "2025-02-25T19:06:41+0530"
+        },
+        {
+          "key": "19e4f419-a2b9-4a24-a3be-12b7d5303293",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:source/containers/DIMLzInventory/Dockerfile",
+          "message": "This image might run with \"root\" as the default user. Make sure it is safe here.",
+          "rule": "docker:S6471",
+          "line": 1,
+          "creation_date": "2024-09-19T17:59:02+0530"
+        },
+        {
+          "key": "d7ee2d4d-79c8-4b22-8fb7-53cb6de67dc4",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:source/containers/DIMScanner/Dockerfile",
+          "message": "This image might run with \"root\" as the default user. Make sure it is safe here.",
+          "rule": "docker:S6471",
+          "line": 1,
+          "creation_date": "2024-09-19T17:59:02+0530"
+        },
+        {
+          "key": "a5ea7441-fe7b-4369-9d7d-a238a5de9b75",
+          "status": "TO_REVIEW",
+          "component": "data-ingest-monitoring:source/data-ingest/src/components/LandingComponent.js",
+          "message": "Using http protocol is insecure. Use https instead.",
+          "rule": "javascript:S5332",
+          "line": 33,
+          "creation_date": "2022-07-13T19:35:45+0530"
+        }
+      ],
+      "total_vulnerabilities": 0,
+      "total_hotspots": 31
+    }
+  ],
+  "summary": {
+    "total_projects": 1,
+    "total_vulnerabilities": 0,
+    "total_hotspots": 31
+  }
+}
