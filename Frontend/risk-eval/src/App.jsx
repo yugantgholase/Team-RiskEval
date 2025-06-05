@@ -1,17 +1,45 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import { CardDemo } from "./components/LoginCard";
-
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from "./components/ui/navigation-menu";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Explorer from "./pages/Explorer/Explorer";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div className="bg-amber-900 fs-1">Risk Eval</div>
-      <CardDemo />
-    </>
+    <Router>
+      <div className="p-4">
+        <h4>RiskEval</h4>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link to="/dashboard" className="px-4 py-2">
+                  Dashboard
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link to="/explorer" className="px-4 py-2">
+                  Explorer
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+
+        <div className="mt-6">
+          <Routes>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/explorer" element={<Explorer />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
