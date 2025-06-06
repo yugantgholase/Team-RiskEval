@@ -43,20 +43,12 @@ export default function DashboardCards() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
-          <ChartPieDonutText />
-        </div>
-
-        <div className="bg-white shadow-md rounded-lg p-6">
-          <ChartPieInteractive />
-        </div>
-
-        <div className="bg-white shadow-md rounded-lg p-6">
-          <ChartRadialLabel />
-        </div>
+        <ChartPieDonutText />
+        <ChartPieInteractive />
+        <ChartRadialLabel />
       </div>
 
-      <div className="w-full bg-white shadow-md rounded-lg p-6 mt-4">
+      <div className="mt-4">
         <ChartAreaInteractive />
       </div>
       <div className="w-full bg-white shadow-md rounded-lg p-6 mt-4">
