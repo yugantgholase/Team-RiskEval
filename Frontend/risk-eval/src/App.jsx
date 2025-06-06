@@ -11,33 +11,27 @@ import Explorer from "./pages/Explorer/Explorer";
 function App() {
   return (
     <Router>
-      <div className="p-4">
-        <h4>RiskEval</h4>
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link to="/dashboard" className="px-4 py-2">
-                  Dashboard
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link to="/explorer" className="px-4 py-2">
-                  Explorer
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-
-        <div className="mt-6">
-          <Routes>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/explorer" element={<Explorer />} />
-          </Routes>
+      <div className="flex flex-row items-center bg-violet-100">
+        <div className="">
+          <h2 className="text-4xl p-4">RiskEval</h2>
         </div>
+        <NavigationMenu>
+          <Link to="/dashboard" className="px-4 py-2 text-2xl">
+            Dashboard
+          </Link>
+        </NavigationMenu>
+        <NavigationMenu>
+          <Link to="/explorer" className="px-4 py-2 text-2xl">
+            Explorer
+          </Link>
+        </NavigationMenu>
+      </div>
+
+      <div className="mt-6">
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/explorer" element={<Explorer />} />
+        </Routes>
       </div>
     </Router>
   );
