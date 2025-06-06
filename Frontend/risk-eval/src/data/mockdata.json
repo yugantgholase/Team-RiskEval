@@ -1,4 +1,6 @@
 {
+  "project_name": "data-ingest-monitoring",
+  "branch_name": "test",
   "results": [
     {
       "component": "data-ingest-monitoring:source/data-ingest/test/LandingComponent.react.test.js",

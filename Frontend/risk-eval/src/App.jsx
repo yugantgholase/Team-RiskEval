@@ -27,7 +27,7 @@ function App() {
         </NavigationMenu>
       </div>
 
-      <div className="mt-6">
+      <div className="m-6">
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/explorer" element={<Explorer />} />

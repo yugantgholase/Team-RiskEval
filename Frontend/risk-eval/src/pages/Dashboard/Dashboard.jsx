@@ -7,19 +7,19 @@ import SeveritySummary from "@/components/dashboard/SeveritySummary";
 
 export default function DashboardCards() {
   return (
-    <div className="bg-gray-100 p-6">
+    <div className="bg-gray-100 p-2">
       <SeveritySummary />
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-2">
         <ChartPieDonutText />
         <ChartPieInteractive />
         <ChartRadialLabel />
       </div>
 
-      <div className="mt-6">
+      <div className="mt-2">
         <ChartAreaInteractive />
       </div>
-      <div className="w-full bg-white shadow-md rounded-lg p-6 mt-6">
+      <div className="w-full bg-white shadow-md rounded-lg p-6 mt-2">
         <DataTableDemo />
       </div>
     </div>

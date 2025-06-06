@@ -14,7 +14,7 @@ const stats = [
       <img
         src={SeverityHighIcon}
         alt="High Priority"
-        className="h-10 w-10 mr-4"
+        className="h-12 w-12 mr-4"
       />
     ),
     count: 10,
@@ -34,7 +34,7 @@ const stats = [
 
 const SeveritySummary = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
       {stats.map((stat, index) => (
         <div
           key={index}
