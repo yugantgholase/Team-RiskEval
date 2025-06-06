@@ -2,7 +2,7 @@ import { ChartAreaInteractive } from "@/components/dashboard/ChartArea";
 import { ChartPieInteractive } from "@/components/dashboard/ChartPieDonutInteractive";
 import { ChartPieDonutText } from "@/components/dashboard/ChartPieDonutText";
 import { ChartRadialLabel } from "@/components/dashboard/ChartRadial";
-import { TableDemo } from "@/components/dashboard/Table";
+import { DataTableDemo } from "@/components/dashboard/DataTableDemo";
 import { ShieldAlert, ShieldCheck, Shield, ChartArea } from "lucide-react";
 
 const stats = [
@@ -52,7 +52,7 @@ export default function DashboardCards() {
         <ChartAreaInteractive />
       </div>
       <div className="w-full bg-white shadow-md rounded-lg p-6 mt-4">
-        <TableDemo />
+        <DataTableDemo />
       </div>
     </div>
   );
