@@ -16,49 +16,30 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { getFilesCount } from "@/hooks/dashboard.hooks";
 
 export const description = "A radial chart with a label";
+const filesCount = getFilesCount();
+const chartData = Object.entries(filesCount)?.map(([language, count]) => ({
+  language,
+  count,
+  fill: `var(--color-${language})`,
+}));
 
-const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-];
-
-const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
-    color: "var(--chart-1)",
-  },
-  safari: {
-    label: "Safari",
-    color: "var(--chart-2)",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "var(--chart-3)",
-  },
-  edge: {
-    label: "Edge",
-    color: "var(--chart-4)",
-  },
-  other: {
-    label: "Other",
-    color: "var(--chart-5)",
-  },
-};
+const chartConfig = {};
+Object.entries(filesCount)?.map(([language], index) => {
+  chartConfig[language] = {
+    label: language,
+    color: `var(--chart-${index + 1})`,
+  };
+});
 
 export function ChartRadialLabel() {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Radial Chart - Label</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Languages</CardTitle>
+        <CardDescription>Supported Languages</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -74,12 +55,12 @@ export function ChartRadialLabel() {
           >
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel nameKey="browser" />}
+              content={<ChartTooltipContent hideLabel nameKey="language" />}
             />
-            <RadialBar dataKey="visitors" background>
+            <RadialBar dataKey="count" background>
               <LabelList
                 position="insideStart"
-                dataKey="browser"
+                dataKey="language"
                 className="fill-white capitalize mix-blend-luminosity"
                 fontSize={11}
               />
@@ -88,11 +69,8 @@ export function ChartRadialLabel() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 leading-none font-medium">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
         <div className="text-muted-foreground leading-none">
-          Showing total visitors for the last 6 months
+          Showing data of supported languages
         </div>
       </CardFooter>
     </Card>

@@ -11,12 +11,12 @@
         "CVE-2025-48491",
         "CVE-2025-36572"
       ],
-      "cvss_score": 9.0,
+      "cvss_score": 9.5,
       "cwe_ids": ["CWE-798"],
       "key": "bf8c66c6-5479-4960-b149-cbfd2255da3d",
       "line": 40,
       "message": "\"token\" detected here, make sure this is not a hard-coded secret.",
-      "priority": "High",
+      "priority": "Critical",
       "reason": "The vulnerability involves hard-coded secrets (CWE-798), which is especially dangerous in a production, public-facing environment handling sensitive data. While the base CVSS scores for the referenced CVEs range from low to critical, the project environment properties (production, public-facing, sensitive data, high confidentiality requirement, and network exposure) significantly increase the risk. Attackers with knowledge of hard-coded credentials could gain unauthorized access, potentially leading to data breaches or system compromise. The environmental CVSS vector (modified attack vector: NETWORK, modified privileges required: NONE, modified confidentiality/integrity: HIGH) justifies a high score of 9.0, reflecting the severe impact in this context.",
       "remediation": "Immediately remove any hard-coded tokens or secrets from the source code. Store secrets in secure vaults or environment variables, and rotate any exposed credentials. Review the codebase for other instances of hard-coded secrets. Implement automated secret scanning in CI/CD pipelines. Ensure that all access to sensitive resources is protected by strong authentication and access controls. If any secrets were exposed, audit for unauthorized access and take appropriate incident response actions.",
       "rule": "javascript:S6418",
@@ -144,7 +144,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/apigateway.yaml",
+      "component": "data-ingest-monitoring:cform/apigateway.java",
       "creation_date": "2023-07-13T14:03:40+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -194,7 +194,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/apigateway.yaml",
+      "component": "data-ingest-monitoring:cform/apigateway.java",
       "creation_date": "2023-07-13T14:03:40+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -270,7 +270,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/apigateway.yaml",
+      "component": "data-ingest-monitoring:cform/apigateway.java",
       "creation_date": "2025-04-14T13:00:59+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -296,7 +296,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/apigateway.yaml",
+      "component": "data-ingest-monitoring:cform/apigateway.ps1",
       "creation_date": "2025-04-14T13:00:59+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -348,7 +348,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/dimfargate.yaml",
+      "component": "data-ingest-monitoring:cform/dimfargate.java",
       "creation_date": "2025-02-25T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -400,7 +400,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/dimfargate.yaml",
+      "component": "data-ingest-monitoring:cform/dimfargate.ps1",
       "creation_date": "2025-02-25T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -426,7 +426,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/dimfargate.yaml",
+      "component": "data-ingest-monitoring:cform/dimfargate.java",
       "creation_date": "2025-02-25T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -504,7 +504,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/lambda-ses.yaml",
+      "component": "data-ingest-monitoring:cform/lambda-ses.java",
       "creation_date": "2023-07-13T14:03:40+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -530,7 +530,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/lambda-ses.yaml",
+      "component": "data-ingest-monitoring:cform/lambda-ses.ps1",
       "creation_date": "2024-12-03T16:06:48+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -582,7 +582,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/lzinventoryfargate.yaml",
+      "component": "data-ingest-monitoring:cform/lzinventoryfargate.java",
       "creation_date": "2025-02-25T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
@@ -660,7 +660,7 @@
       "status": "TO_REVIEW"
     },
     {
-      "component": "data-ingest-monitoring:cform/lzinventorylambda.yaml",
+      "component": "data-ingest-monitoring:cform/lzinventorylambda.java",
       "creation_date": "2025-02-25T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",

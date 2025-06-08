@@ -7,7 +7,9 @@ import {
   OctagonAlert,
 } from "lucide-react";
 import SeverityHighIcon from "@/assets/severity-high.svg";
+import { getSeverityCount } from "@/hooks/dashboard.hooks";
 
+const severity = getSeverityCount();
 const stats = [
   {
     icon: (
@@ -17,17 +19,17 @@ const stats = [
         className="h-12 w-12 mr-4"
       />
     ),
-    count: 10,
+    count: severity?.high,
     label: "High Severity",
   },
   {
     icon: <OctagonAlert className="h-12 w-12 text-yellow-500" />,
-    count: 20,
+    count: severity?.medium,
     label: "Medium Severity",
   },
   {
     icon: <OctagonAlert className="h-12 w-12 text-green-500" />,
-    count: 30,
+    count: severity?.low,
     label: "Low Severity",
   },
 ];

@@ -84,7 +84,6 @@ const Explorer = () => {
   };
 
   const handleFileClick = (node) => {
-    console.log("ji", node.name);
     setSelectedFile(node.name);
   };
 
@@ -99,8 +98,6 @@ const Explorer = () => {
   const fileData = mockData.results.filter((item) =>
     item.component.includes(currentFilePath)
   );
-  console.log("path", currentFilePath);
-  console.log("file", fileData);
 
   return (
     <div className="p-6">
