@@ -8,6 +8,7 @@ import {
 } from "./components/ui/navigation-menu";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Explorer from "./pages/Explorer/Explorer";
+import { Toaster } from "sonner";
 function App() {
   return (
     <Router>
@@ -33,6 +34,7 @@ function App() {
           <Route path="/explorer" element={<Explorer />} />
         </Routes>
       </div>
+      <Toaster />
     </Router>
   );
 }

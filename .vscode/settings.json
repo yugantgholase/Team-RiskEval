@@ -9,6 +9,7 @@
     "lzinventoryfargate",
     "lzinventorylambda",
     "mockdata",
-    "seccomp"
+    "seccomp",
+    "sonner"
   ]
 }

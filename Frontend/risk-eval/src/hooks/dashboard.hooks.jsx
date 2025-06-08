@@ -54,3 +54,15 @@ export function getFilesCount() {
 
   return counts;
 }
+
+export function getTableData() {
+  const tableData = vulnerabilities.map((item) => ({
+    component: item.component.split(":").pop(),
+    line: item.line,
+    severity: item.priority,
+    message: item.message,
+    cvss: item.cvss_score,
+    status: item.status,
+  }));
+  return tableData;
+}
