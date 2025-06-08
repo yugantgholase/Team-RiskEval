@@ -25,10 +25,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export const description = "An interactive area chart";
+export const description =
+  "An interactive area chart showing different details";
 
 const chartData = [
-  { date: "2024-04-01", desktop: 222, mobile: 150 },
+  { date: "2024-04-01", desktop: 222, mobile: 300 },
   { date: "2024-04-02", desktop: 97, mobile: 180 },
   { date: "2024-04-03", desktop: 167, mobile: 120 },
   { date: "2024-04-04", desktop: 242, mobile: 260 },
@@ -122,9 +123,6 @@ const chartData = [
 ];
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
   desktop: {
     label: "Desktop",
     color: "var(--chart-1)",

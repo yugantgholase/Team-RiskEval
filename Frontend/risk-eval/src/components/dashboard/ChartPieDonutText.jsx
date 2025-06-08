@@ -69,7 +69,7 @@ export function ChartPieDonutText() {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
+          className="mx-auto aspect-square max-h-[350px]"
         >
           <PieChart>
             <ChartTooltip
@@ -80,7 +80,7 @@ export function ChartPieDonutText() {
               data={chartData}
               dataKey="count"
               nameKey="severity"
-              innerRadius={60}
+              innerRadius={80}
               strokeWidth={5}
             >
               <Label
@@ -105,7 +105,7 @@ export function ChartPieDonutText() {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Count
+                          Total Count
                         </tspan>
                       </text>
                     );

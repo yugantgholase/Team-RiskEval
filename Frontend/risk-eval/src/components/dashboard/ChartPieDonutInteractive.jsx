@@ -113,7 +113,7 @@ export function ChartPieInteractive() {
               data={cveData}
               dataKey="count"
               nameKey="cveid"
-              innerRadius={60}
+              innerRadius={70}
               strokeWidth={5}
               activeIndex={activeIndex}
               activeShape={({ outerRadius = 0, ...props }) => (

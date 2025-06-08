@@ -44,14 +44,14 @@ export function ChartRadialLabel() {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
+          className="mx-auto aspect-square max-h-[300px]"
         >
           <RadialBarChart
             data={chartData}
             startAngle={-90}
             endAngle={380}
-            innerRadius={30}
-            outerRadius={110}
+            innerRadius={40}
+            outerRadius={140}
           >
             <ChartTooltip
               cursor={false}
