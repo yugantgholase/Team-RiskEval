@@ -100,7 +100,7 @@ const Explorer = () => {
   );
 
   return (
-    <div className="p-6">
+    <div className="bg-gray-100 p-2">
       {/* Breadcrumb Header */}
       <div className="mb-6 text-lg font-semibold text-blue-600">
         {path.map((segment, index) => (
@@ -117,23 +117,29 @@ const Explorer = () => {
 
       {/* Folder/File Grid */}
       {!selectedFile && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
-          {currentNodes.map((node) => (
-            <ExplorerNode
-              key={node.name}
-              node={node}
-              onFolderClick={handleFolderClick}
-              onFileClick={handleFileClick}
-            />
-          ))}
+        <div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
+            {currentNodes.map((node) => (
+              <ExplorerNode
+                key={node.name}
+                node={node}
+                onFolderClick={handleFolderClick}
+                onFileClick={handleFileClick}
+              />
+            ))}
+          </div>
+          <div> </div>
         </div>
       )}
 
       {/* File Details with Vulnerability Cards */}
       {selectedFile && (
-        <Card className="mt-6 p-4">
+        <Card className="mt-6 p-4 gap-2 ">
           <CardHeader>
-            <CardTitle>{selectedFile}</CardTitle>
+            <CardTitle className="flex flex-row text-2xl">
+              <FileText size={30} className="mt-1" />
+              {selectedFile}
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

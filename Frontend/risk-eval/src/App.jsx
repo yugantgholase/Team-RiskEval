@@ -1,14 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "./components/ui/navigation-menu";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import Explorer from "./pages/Explorer/Explorer";
+import { NavigationMenu } from "./components/ui/navigation-menu";
+import Dashboard from "@/pages/Dashboard/Dashboard";
+import Explorer from "@/pages/Explorer/Explorer";
+import ProjectHeader from "@/pages/ProjectHeader";
 import { Toaster } from "sonner";
+
 function App() {
   return (
     <Router>
@@ -28,7 +25,8 @@ function App() {
         </NavigationMenu>
       </div>
 
-      <div className="m-6">
+      <div className="m-6 mt-5">
+        <ProjectHeader />
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/explorer" element={<Explorer />} />

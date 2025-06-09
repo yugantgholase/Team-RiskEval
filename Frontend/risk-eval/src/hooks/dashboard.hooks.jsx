@@ -1,5 +1,13 @@
 import mockdata from "@/data/mockdata";
+
 const vulnerabilities = mockdata?.results;
+
+export function getProjectDetails() {
+  return {
+    projectName: mockdata.project_name,
+    branchName: mockdata.branch_name,
+  };
+}
 export function getSeverityCount() {
   return {
     critical: vulnerabilities?.filter((v) => v.priority === "Critical").length,
