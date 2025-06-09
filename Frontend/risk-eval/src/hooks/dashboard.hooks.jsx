@@ -1,4 +1,15 @@
 import mockdata from "@/data/mockdata";
+import { useLocation } from "react-router";
+
+export function useQueryParams() {
+  const { search } = useLocation();
+  const queryParams = new URLSearchParams(search);
+
+  const projectName = queryParams.get("projectName")?.replace(/"/g, "");
+  const projectBranch = queryParams.get("branch")?.replace(/"/g, "");
+
+  return { projectName, projectBranch };
+}
 
 const vulnerabilities = mockdata?.results;
 

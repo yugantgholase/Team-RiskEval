@@ -1,12 +1,5 @@
-import { Link, useLocation, Routes, Route, useNavigate } from "react-router";
+import { Link, useLocation, Routes, Route } from "react-router";
 import "./App.css";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link,
-//   useLocation,
-// } from "react-router";
 import { NavigationMenu } from "./components/ui/navigation-menu";
 import Dashboard from "@/pages/Dashboard/Dashboard";
 import Explorer from "@/pages/Explorer/Explorer";
@@ -16,8 +9,6 @@ import { ShieldCheck } from "lucide-react";
 
 function App() {
   const location = useLocation();
-  const navigate = useNavigate();
-
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -26,14 +17,11 @@ function App() {
         className="flex flex-row items-center bg-white"
         style={{ borderBottom: "4px solid #ececec" }}
       >
-        <div
-          className="text-4xl flex flex-row font-bold p-3"
-          // onClick={navigate("/dashboard")}
-        >
+        <Link to="/dashboard" className="text-4xl flex flex-row font-bold p-3">
           <ShieldCheck size={40} className="mr-1 mt-1" />
           <h1 style={{ color: "red" }}>Risk</h1>
           <h1>Eval</h1>
-        </div>
+        </Link>
 
         <NavigationMenu>
           <Link

@@ -1,6 +1,6 @@
 {
   "project_name": "data-ingest-monitoring",
-  "branch_name": "test",
+  "branch_name": "yg-may",
   "results": [
     {
       "component": "data-ingest-monitoring:source/data-ingest/test/LandingComponent.react.test.js",
@@ -111,12 +111,12 @@
         "CVE-2025-48491",
         "CVE-2025-36572"
       ],
-      "cvss_score": 8.2,
+      "cvss_score": 4.2,
       "cwe_ids": ["CWE-798"],
       "key": "c2d1bbbf-45a1-42e2-b7f6-56037186ace7",
       "line": 17,
       "message": "\"API_KEY\" detected here, make sure this is not a hard-coded secret.",
-      "priority": "High",
+      "priority": "Low",
       "reason": "The vulnerability involves a hard-coded API key (CWE-798), which is a significant risk in a production, public-facing environment handling sensitive data. While the base CVSS scores for the referenced CVEs are low to medium (2.7 and 5.3), the project environment properties indicate high confidentiality and medium integrity/availability requirements, with the system being public-facing and handling sensitive data. Adjusting for these environmental factors (high confidentiality impact, network exposure, no privileges required), the effective CVSS score increases to 8.2 (High). This reflects the elevated risk of unauthorized access or data exposure if the hard-coded secret is discovered and exploited.",
       "remediation": "Remove all hard-coded API keys from the source code. Store secrets in a secure secrets management system (such as AWS Secrets Manager, Azure Key Vault, or HashiCorp Vault). Rotate any exposed keys immediately and update all dependent systems. Implement code scanning to prevent future hard-coded secrets. Review access logs for potential unauthorized use of the exposed key.",
       "rule": "python:S6418",

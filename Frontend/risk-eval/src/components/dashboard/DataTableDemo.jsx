@@ -44,6 +44,15 @@ const data = tableData?.map((item, index) => ({
 
 export function DataTableDemo() {
   const navigate = useNavigate();
+
+  const getSeverityColor = (condition) => {
+    if (condition === "Low") return "#4CAF50"; // Green
+    if (condition === "Medium") return "#FFC107"; // Amber
+    if (condition === "High") return "#FF5722"; // Deep Orange
+    if (condition === "Critical") return "#F44336"; // Red
+    return "#ececec"; // Default
+  };
+
   const columns = [
     // {
     //   id: "select",
@@ -112,7 +121,17 @@ export function DataTableDemo() {
           </Button>
         );
       },
-      cell: ({ row }) => <div>{row.getValue("severity")}</div>,
+      cell: ({ row }) => (
+        <div className="flex flex-row items-center">
+          <div
+            className="h-2 w-2 rounded mr-1"
+            style={{
+              backgroundColor: `${getSeverityColor(row.getValue("severity"))}`,
+            }}
+          ></div>
+          <div>{row.getValue("severity")}</div>
+        </div>
+      ),
     },
     {
       accessorKey: "message",
