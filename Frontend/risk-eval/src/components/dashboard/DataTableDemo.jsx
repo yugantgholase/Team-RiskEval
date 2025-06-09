@@ -124,7 +124,7 @@ export function DataTableDemo() {
       cell: ({ row }) => (
         <div className="flex flex-row items-center">
           <div
-            className="h-2 w-2 rounded mr-1"
+            className="h-2 w-2 rounded mr-2"
             style={{
               backgroundColor: `${getSeverityColor(row.getValue("severity"))}`,
             }}

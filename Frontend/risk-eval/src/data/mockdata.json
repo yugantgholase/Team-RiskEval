@@ -4,7 +4,7 @@
   "results": [
     {
       "component": "data-ingest-monitoring:source/data-ingest/test/LandingComponent.react.test.js",
-      "creation_date": "2023-02-20T15:40:34+0530",
+      "creation_date": "2025-02-01T15:40:34+0530",
       "cve_ids": [
         "CVE-2025-46352",
         "CVE-2025-5379",
@@ -24,7 +24,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/data-ingest/test/LandingComponent.react.test.js",
-      "creation_date": "2023-02-20T15:40:34+0530",
+      "creation_date": "2025-02-04T15:40:34+0530",
       "cve_ids": [
         "CVE-2025-46352",
         "CVE-2025-5379",
@@ -44,7 +44,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/data-ingest/test/ProjectForm.react.test.js",
-      "creation_date": "2023-02-27T14:56:52+0530",
+      "creation_date": "2025-02-07T14:56:52+0530",
       "cve_ids": [
         "CVE-2025-46352",
         "CVE-2025-5379",
@@ -64,7 +64,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/data-ingest/test/ProjectForm.react.test.js",
-      "creation_date": "2023-02-27T14:56:52+0530",
+      "creation_date": "2025-02-13T14:56:52+0530",
       "cve_ids": [
         "CVE-2025-46352",
         "CVE-2025-5379",
@@ -84,7 +84,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/data-ingest/test/ProjectForm.react.test.js",
-      "creation_date": "2023-04-12T11:23:55+0530",
+      "creation_date": "2025-02-15T11:23:55+0530",
       "cve_ids": [
         "CVE-2025-46352",
         "CVE-2025-5379",
@@ -104,7 +104,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/lambda/src/Vulnerability/vulnerable.py",
-      "creation_date": "2025-06-01T18:48:48+0530",
+      "creation_date": "2025-02-19T18:48:48+0530",
       "cve_ids": [
         "CVE-2025-46352",
         "CVE-2025-5379",
@@ -124,7 +124,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/lambda/src/Vulnerability/vulnerable.py",
-      "creation_date": "2025-06-01T18:12:19+0530",
+      "creation_date": "2025-02-22T18:12:19+0530",
       "cve_ids": [
         "CVE-2025-48885",
         "CVE-2025-5185",
@@ -145,7 +145,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/apigateway.java",
-      "creation_date": "2023-07-13T14:03:40+0530",
+      "creation_date": "2025-02-28T14:03:40+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -170,7 +170,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/apigateway.yaml",
-      "creation_date": "2023-07-13T14:03:40+0530",
+      "creation_date": "2025-03-03T14:03:40+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -195,7 +195,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/apigateway.java",
-      "creation_date": "2023-07-13T14:03:40+0530",
+      "creation_date": "2025-03-07T14:03:40+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -220,7 +220,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/apigateway.yaml",
-      "creation_date": "2025-04-14T13:00:59+0530",
+      "creation_date": "2025-03-10T13:00:59+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -245,7 +245,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/apigateway.yaml",
-      "creation_date": "2025-04-14T13:00:59+0530",
+      "creation_date": "2025-03-17T13:00:59+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -271,7 +271,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/apigateway.java",
-      "creation_date": "2025-04-14T13:00:59+0530",
+      "creation_date": "2025-03-22T13:00:59+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -297,7 +297,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/apigateway.ps1",
-      "creation_date": "2025-04-14T13:00:59+0530",
+      "creation_date": "2025-03-27T13:00:59+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -323,7 +323,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/apigateway.yaml",
-      "creation_date": "2025-04-14T13:00:59+0530",
+      "creation_date": "2025-03-30T13:00:59+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -349,7 +349,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/dimfargate.java",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-04-05:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -375,7 +375,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/dimfargate.yaml",
-      "creation_date": "2024-09-19T17:59:02+0530",
+      "creation_date": "2025-04-11T17:59:02+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -401,7 +401,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/dimfargate.ps1",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-04-14T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -427,7 +427,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/dimfargate.java",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-04-16T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -453,7 +453,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lambda-scanner.yaml",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-04-19T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -479,7 +479,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lambda-scanner.yaml",
-      "creation_date": "2024-09-26T13:55:09+0530",
+      "creation_date": "2025-04-20T13:55:09+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -505,7 +505,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lambda-ses.java",
-      "creation_date": "2023-07-13T14:03:40+0530",
+      "creation_date": "2025-04-22T14:03:40+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -531,7 +531,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lambda-ses.ps1",
-      "creation_date": "2024-12-03T16:06:48+0530",
+      "creation_date": "2025-04-23T16:06:48+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -557,7 +557,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lambda-ses.yaml",
-      "creation_date": "2025-04-14T13:00:59+0530",
+      "creation_date": "2025-04-26T13:00:59+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -583,7 +583,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lzinventoryfargate.java",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-04-28T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -609,7 +609,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lzinventoryfargate.yaml",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-04-30T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -635,7 +635,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lzinventoryfargate.yaml",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-05-01T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -661,7 +661,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lzinventorylambda.java",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-05-02T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -687,7 +687,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lzinventorylambda.yaml",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-05-08T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -713,7 +713,7 @@
     },
     {
       "component": "data-ingest-monitoring:cform/lzinventorylambda.yaml",
-      "creation_date": "2025-02-25T19:06:41+0530",
+      "creation_date": "2025-05-09T19:06:41+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -739,7 +739,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/containers/DIMLzInventory/Dockerfile",
-      "creation_date": "2024-09-19T17:59:02+0530",
+      "creation_date": "2025-05-11T17:59:02+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -764,7 +764,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/containers/DIMScanner/Dockerfile",
-      "creation_date": "2024-09-19T17:59:02+0530",
+      "creation_date": "2025-05-13T17:59:02+0530",
       "cve_ids": [
         "CVE-2025-5184",
         "CVE-2025-5162",
@@ -789,7 +789,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/data-ingest/src/components/LandingComponent.js",
-      "creation_date": "2022-07-13T19:35:45+0530",
+      "creation_date": "2022-05-15T19:35:45+0530",
       "cve_ids": [
         "CVE-2025-4659",
         "CVE-2025-5184",
@@ -809,7 +809,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/lambda/src/Vulnerability/vulnerable.py",
-      "creation_date": "2025-06-01T18:12:19+0530",
+      "creation_date": "2025-05-17T18:12:19+0530",
       "cve_ids": [],
       "cvss_score": 8.6,
       "cwe_ids": ["CWE-215", "CWE-489"],
@@ -824,7 +824,7 @@
     },
     {
       "component": "data-ingest-monitoring:source/lambda/src/Vulnerability/vulnerable.py",
-      "creation_date": "2025-06-01T18:12:19+0530",
+      "creation_date": "2025-05-18T18:12:19+0530",
       "cve_ids": [],
       "cvss_score": 4.8,
       "cwe_ids": ["CWE-1240"],

@@ -5,6 +5,7 @@
     "cveid",
     "Cveids",
     "dimfargate",
+    "fillcvss",
     "HSTS",
     "lzinventoryfargate",
     "lzinventorylambda",

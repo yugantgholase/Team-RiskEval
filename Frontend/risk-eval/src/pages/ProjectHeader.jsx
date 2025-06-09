@@ -37,8 +37,6 @@ const ProjectHeader = () => {
       label: "Branch Name",
     },
   ];
-  console.log(projectName);
-  console.log(projectBranch);
   return (
     <div
       className="flex gap-3 mb-4 justify-between items-center bg-white p-4 rounded mx-2"

@@ -85,3 +85,11 @@ export function getTableData() {
   }));
   return tableData;
 }
+
+export function getAreaChartData() {
+  const data = vulnerabilities.map((item) => ({
+    date: item.creation_date.split("T")[0],
+    cvss: item.cvss_score,
+  }));
+  return data;
+}
