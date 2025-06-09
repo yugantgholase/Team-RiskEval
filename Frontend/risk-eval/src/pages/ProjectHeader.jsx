@@ -25,10 +25,7 @@ const ProjectHeader = () => {
         >
           <div className="mr-3">{stat.icon}</div>
           {/* <div className="text-gray-600">{stat.label}</div> */}
-          <div className=" text-xl font-bold whitespace-nowrap">
-            {stat.name}
-          </div>
-
+          <div className=" text-xl whitespace-nowrap">{stat.name}</div>
           <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-70 transition-opacity pointer-events-none z-10">
             {stat.label}{" "}
           </div>

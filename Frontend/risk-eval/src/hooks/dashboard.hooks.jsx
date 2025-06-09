@@ -65,7 +65,7 @@ export function getFilesCount() {
 
 export function getTableData() {
   const tableData = vulnerabilities.map((item) => ({
-    component: item.component.split(":").pop(),
+    component: item.component,
     line: item.line,
     severity: item.priority,
     message: item.message,

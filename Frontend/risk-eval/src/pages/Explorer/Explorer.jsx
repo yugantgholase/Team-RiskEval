@@ -1,10 +1,10 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
+import { useLocation } from "react-router";
 import mockData from "../../data/mockdata.json";
 
 import { Folder, FileText } from "lucide-react";
-
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import VulnerabilityCard from "@/components/explorer/VulnerabilityCard"; //
+import VulnerabilityCard from "@/components/explorer/VulnerabilityCard";
 
 // Utility to build a tree from component paths
 const buildTree = (paths) => {
@@ -57,6 +57,9 @@ const ExplorerNode = ({ node, onFolderClick, onFileClick }) => {
 };
 
 const Explorer = () => {
+  const location = useLocation();
+  const filePathFromState = location.state?.filePath || null;
+
   const paths = useMemo(
     () => mockData.results.map((item) => item.component),
     []
@@ -65,6 +68,16 @@ const Explorer = () => {
 
   const [path, setPath] = useState(["data-ingest-monitoring"]);
   const [selectedFile, setSelectedFile] = useState(null);
+
+  // Auto-navigate to file if coming from another page
+  useEffect(() => {
+    if (filePathFromState) {
+      const [root, rest] = filePathFromState.split(":");
+      const parts = [root, ...rest.split("/")];
+      setPath(parts.slice(0, -1));
+      setSelectedFile(parts[parts.length - 1]);
+    }
+  }, [filePathFromState]);
 
   const getCurrentNodes = (tree, path) => {
     let current = tree;
@@ -93,10 +106,12 @@ const Explorer = () => {
   };
 
   const currentFilePath =
-    path.length > 1 ? `${path[0]}:${path.slice(1).join("/")}` : path[0];
+    path.length > 1
+      ? `${path[0]}:${path.slice(1).join("/")}/${selectedFile}`
+      : path[0];
 
-  const fileData = mockData.results.filter((item) =>
-    item.component.includes(currentFilePath)
+  const fileData = mockData.results.filter(
+    (item) => item.component === currentFilePath
   );
 
   return (
@@ -113,31 +128,29 @@ const Explorer = () => {
             {index < path.length - 1 && " > "}
           </span>
         ))}
+        {selectedFile && ` > ${selectedFile}`}
       </div>
 
       {/* Folder/File Grid */}
       {!selectedFile && (
-        <div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
-            {currentNodes.map((node) => (
-              <ExplorerNode
-                key={node.name}
-                node={node}
-                onFolderClick={handleFolderClick}
-                onFileClick={handleFileClick}
-              />
-            ))}
-          </div>
-          <div> </div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
+          {currentNodes.map((node) => (
+            <ExplorerNode
+              key={node.name}
+              node={node}
+              onFolderClick={handleFolderClick}
+              onFileClick={handleFileClick}
+            />
+          ))}
         </div>
       )}
 
       {/* File Details with Vulnerability Cards */}
       {selectedFile && (
-        <Card className="mt-6 p-4 gap-2 ">
+        <Card className="mt-6 p-4 gap-2">
           <CardHeader>
             <CardTitle className="flex flex-row text-2xl">
-              <FileText size={30} className="mt-1" />
+              <FileText size={30} className="mt-1 mr-2" />
               {selectedFile}
             </CardTitle>
           </CardHeader>

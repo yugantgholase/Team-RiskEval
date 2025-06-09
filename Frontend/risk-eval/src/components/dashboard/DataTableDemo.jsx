@@ -80,7 +80,9 @@ export function DataTableDemo() {
           </Button>
         );
       },
-      cell: ({ row }) => <div>{row.getValue("component")}</div>,
+      cell: ({ row }) => (
+        <div>{row.getValue("component").split(":").pop()}</div>
+      ),
     },
     {
       accessorKey: "line",
@@ -176,14 +178,24 @@ export function DataTableDemo() {
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
                 onClick={() => {
-                  navigator.clipboard.writeText(currentRow.component);
+                  navigator.clipboard.writeText(
+                    currentRow.component.split(":").pop()
+                  );
                   toast.success("Copied to clipboard!");
                 }}
               >
                 Copy File path
               </DropdownMenuItem>
               {/* <DropdownMenuSeparator /> */}
-              <DropdownMenuItem onClick={() => navigate("/explorer")}>
+              <DropdownMenuItem
+                onClick={() =>
+                  navigate("/explorer", {
+                    state: {
+                      filePath: currentRow.component,
+                    },
+                  })
+                }
+              >
                 View in Explorer
               </DropdownMenuItem>
             </DropdownMenuContent>
