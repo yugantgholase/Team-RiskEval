@@ -39,19 +39,25 @@ const chartConfig = {
   },
   critical: {
     label: "Critical",
-    color: "var(--chart-1)",
+    // color: "var(--chart-1)",
+    color: "#af2525",
+    // color: "#e23131",
   },
   high: {
     label: "High",
-    color: "var(--chart-2)",
+    color: "var(--chart-1)",
+    // color: "#e23131",
   },
   medium: {
     label: "Medium",
-    color: "var(--chart-3)",
+    color: "var(--chart-4)",
+    // color: "#e5dd52",
   },
   low: {
     label: "Low",
-    color: "var(--chart-4)",
+    // color: "var(--chart-3)",
+    color: "#008d45",
+    // color: "#00b55a",
   },
 };
 
@@ -61,7 +67,7 @@ export function ChartPieDonutText() {
   }, []);
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col" style={{ borderColor: "#dcdcdc" }}>
       <CardHeader className="items-center pb-0">
         <CardTitle>Severity</CardTitle>
         <CardDescription>Summary of the Severity</CardDescription>

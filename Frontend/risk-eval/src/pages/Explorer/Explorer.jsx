@@ -115,7 +115,10 @@ const Explorer = () => {
   );
 
   return (
-    <div className="bg-gray-100 p-2">
+    <div
+      className="bg-gray-100 p-2 m-2 rounded"
+      style={{ border: "1px solid #ececec" }}
+    >
       {/* Breadcrumb Header */}
       <div className="mb-6 text-lg font-semibold text-blue-600">
         {path.map((segment, index) => (
@@ -133,7 +136,7 @@ const Explorer = () => {
 
       {/* Folder/File Grid */}
       {!selectedFile && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 ">
           {currentNodes.map((node) => (
             <ExplorerNode
               key={node.name}
@@ -147,7 +150,7 @@ const Explorer = () => {
 
       {/* File Details with Vulnerability Cards */}
       {selectedFile && (
-        <Card className="mt-6 p-4 gap-2">
+        <Card className="mt-6 gap-2">
           <CardHeader>
             <CardTitle className="flex flex-row text-2xl">
               <FileText size={30} className="mt-1 mr-2" />

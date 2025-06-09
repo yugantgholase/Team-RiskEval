@@ -7,10 +7,11 @@ function Card({ className, ...props }) {
     <div
       data-slot="card"
       className={cn(
-        "bg-card text-card-foreground flex flex-col rounded-xl border py-6 shadow-sm",
+        "bg-card text-card-foreground flex flex-col rounded-xl border py-6 ",
         className
       )}
       {...props}
+      style={{ border: "1px solid #ececec" }}
     />
   );
 }

@@ -57,52 +57,54 @@ export function ChartPieInteractive() {
   return (
     <Card data-chart={id} className="flex flex-col">
       <ChartStyle id={id} config={chartConfig} />
-      <CardHeader className="flex-row items-start space-y-0 pb-0">
+      <CardHeader className="flex flex-row justify-between">
         <div className="grid gap-1">
           <CardTitle>CVE IDs</CardTitle>
           <CardDescription>Top 5 cve ids found</CardDescription>
         </div>
-        <Select value={activeMonth} onValueChange={setActiveMonth}>
-          <SelectTrigger
-            className="ml-auto h-7 w-[130px] rounded-lg pl-2?.5"
-            aria-label="Select a value"
-          >
-            <SelectValue placeholder="Select CVE ID" />
-          </SelectTrigger>
-          <SelectContent align="end" className="rounded-xl">
-            {months?.map((key) => {
-              const config = chartConfig[key];
+        <div>
+          <Select value={activeMonth} onValueChange={setActiveMonth}>
+            <SelectTrigger
+              className="ml-auto h-7 w-[152px] rounded-lg pl-2?.5"
+              aria-label="Select a value"
+            >
+              <SelectValue placeholder="Select CVE ID" />
+            </SelectTrigger>
+            <SelectContent align="end" className="rounded-xl">
+              {months?.map((key) => {
+                const config = chartConfig[key];
 
-              if (!config) {
-                return null;
-              }
+                if (!config) {
+                  return null;
+                }
 
-              return (
-                <SelectItem
-                  key={key}
-                  value={key}
-                  className="rounded-lg [&_span]:flex"
-                >
-                  <div className="flex items-center gap-2 text-xs">
-                    <span
-                      className="flex h-3 w-3 shrink-0 rounded-xs"
-                      style={{
-                        backgroundColor: `var(--color-${key})`,
-                      }}
-                    />
-                    {config?.label}
-                  </div>
-                </SelectItem>
-              );
-            })}
-          </SelectContent>
-        </Select>
+                return (
+                  <SelectItem
+                    key={key}
+                    value={key}
+                    className="rounded-lg [&_span]:flex"
+                  >
+                    <div className="flex items-center gap-2 text-xs">
+                      <span
+                        className="flex h-3 w-3 shrink-0 rounded-xs"
+                        style={{
+                          backgroundColor: `var(--color-${key})`,
+                        }}
+                      />
+                      {config?.label}
+                    </div>
+                  </SelectItem>
+                );
+              })}
+            </SelectContent>
+          </Select>
+        </div>
       </CardHeader>
       <CardContent className="flex flex-1 justify-center pb-0">
         <ChartContainer
           id={id}
           config={chartConfig}
-          className="mx-auto aspect-square w-full max-w-[300px]"
+          className="mx-auto aspect-square w-full max-w-[350px]"
         >
           <PieChart>
             <ChartTooltip
@@ -113,7 +115,7 @@ export function ChartPieInteractive() {
               data={cveData}
               dataKey="count"
               nameKey="cveid"
-              innerRadius={70}
+              innerRadius={80}
               strokeWidth={5}
               activeIndex={activeIndex}
               activeShape={({ outerRadius = 0, ...props }) => (
