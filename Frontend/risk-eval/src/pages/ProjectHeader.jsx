@@ -70,9 +70,9 @@ const ProjectHeader = () => {
                     >
                       {stat.name}
                     </SelectItem>
-                    <SelectItem value="others" className="rounded-lg">
+                    {/* <SelectItem value="others" className="rounded-lg">
                       Others...
-                    </SelectItem>
+                    </SelectItem> */}
                   </SelectContent>
                 </Select>
               </div>
