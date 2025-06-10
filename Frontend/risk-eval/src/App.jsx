@@ -17,8 +17,11 @@ function App() {
         className="flex flex-row items-center bg-white"
         style={{ borderBottom: "4px solid #ececec" }}
       >
-        <Link to="/dashboard" className="text-4xl flex flex-row font-bold p-3">
-          <ShieldCheck size={40} className="mr-1 mt-1" />
+        <Link
+          to="/dashboard"
+          className="text-3xl flex flex-row font-bold p-3 mr-6"
+        >
+          <ShieldCheck size={30} className="mr-1 mt-1" />
           <h1 style={{ color: "red" }}>Risk</h1>
           <h1>Eval</h1>
         </Link>
@@ -26,7 +29,7 @@ function App() {
         <NavigationMenu>
           <Link
             to="/dashboard"
-            className={`px-4 py-2 text-xl font-bold ${
+            className={`px-4 py-2 text-[18px] font-bold ${
               isActive("/dashboard") ? "border-b-1 border-red-500 " : ""
             }`}
           >
@@ -36,7 +39,7 @@ function App() {
         <NavigationMenu>
           <Link
             to="/explorer"
-            className={`px-4 py-2 text-xl font-bold ${
+            className={`px-4 py-2 text-[18px] font-bold ${
               isActive("/explorer") ? "border-b-1 border-red-500 " : ""
             }`}
           >

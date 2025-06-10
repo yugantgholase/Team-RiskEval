@@ -8,6 +8,13 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const projectDetails = getProjectDetails();
 const stats = [
@@ -46,12 +53,28 @@ const ProjectHeader = () => {
         {stats.map((stat, index) => (
           <Tooltip key={index}>
             <TooltipTrigger asChild>
-              <div
-                key={index}
-                className="relative group bg-gray-100  rounded p-2 flex items-center"
-              >
+              <div key={index} className="relative p-2 flex items-center">
                 <div className="mr-3">{stat.icon}</div>
-                <div className="  whitespace-nowrap">{stat.name}</div>
+                <Select>
+                  <SelectTrigger
+                    className="hidden  w-fit rounded-lg sm:ml-auto sm:flex"
+                    aria-label="Select a value"
+                  >
+                    <SelectValue placeholder={stat.name} />
+                  </SelectTrigger>
+
+                  <SelectContent className="rounded-xl whitespace-nowrap">
+                    <SelectItem
+                      value="currentProject"
+                      className="rounded-lg flex whitespace-nowrap"
+                    >
+                      {stat.name}
+                    </SelectItem>
+                    <SelectItem value="others" className="rounded-lg">
+                      Others...
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
             </TooltipTrigger>
             <TooltipContent>
@@ -69,7 +92,7 @@ const ProjectHeader = () => {
               download
               className="align-middle group"
             >
-              <Download size={25} className="group-hover:text-purple-800 " />
+              <Download size={22} className="group-hover:text-purple-800 " />
             </a>
           </TooltipTrigger>
           <TooltipContent>
