@@ -34,6 +34,7 @@ import {
 import { getTableData } from "@/hooks/dashboard.hooks";
 import { toast } from "sonner";
 import { useNavigate } from "react-router";
+import { Eye } from "lucide-react";
 
 const tableData = getTableData();
 
@@ -176,7 +177,13 @@ export function DataTableDemo() {
           </Button>
         );
       },
-      cell: ({ row }) => <div>{row.getValue("status")}</div>,
+      cell: ({ row }) => (
+        <div className="justify-middle">
+          {row.getValue("status") === "TO_REVIEW" && (
+            <Eye className="text-blue-500" />
+          )}
+        </div>
+      ),
     },
 
     {
