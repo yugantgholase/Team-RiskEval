@@ -6,6 +6,7 @@ import Explorer from "@/pages/Explorer/Explorer";
 import ProjectHeader from "@/pages/ProjectHeader";
 import { Toaster } from "sonner";
 import { ShieldCheck } from "lucide-react";
+import Code from "./pages/Code/Code";
 
 function App() {
   const location = useLocation();
@@ -46,13 +47,25 @@ function App() {
             Explorer
           </Link>
         </NavigationMenu>
+        <NavigationMenu>
+          <Link
+            to="/code"
+            className={`px-4 py-2 text-[18px] font-bold ${
+              isActive("/code") ? "border-b-1 border-red-500 " : ""
+            }`}
+          >
+            Code
+          </Link>
+        </NavigationMenu>
       </div>
 
       <div className="m-6 mt-5" style={{ backgroundColor: "#fafafa" }}>
         <ProjectHeader />
         <Routes>
+          <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/explorer" element={<Explorer />} />
+          <Route path="/code" element={<Code />} />
         </Routes>
       </div>
       <Toaster />

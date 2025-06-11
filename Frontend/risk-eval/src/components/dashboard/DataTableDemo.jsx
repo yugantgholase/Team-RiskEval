@@ -31,6 +31,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { getTableData } from "@/hooks/dashboard.hooks";
 import { toast } from "sonner";
 import { useNavigate } from "react-router";
@@ -107,7 +112,7 @@ export function DataTableDemo() {
           </Button>
         );
       },
-      cell: ({ row }) => <div>{row.getValue("line")}</div>,
+      cell: ({ row }) => <div className="ml-2">{row.getValue("line")}</div>,
     },
     {
       accessorKey: "severity",
@@ -162,7 +167,7 @@ export function DataTableDemo() {
           </Button>
         );
       },
-      cell: ({ row }) => <div>{row.getValue("cvss")}</div>,
+      cell: ({ row }) => <div className="ml-3">{row.getValue("cvss")}</div>,
     },
     {
       accessorKey: "status",
@@ -178,10 +183,17 @@ export function DataTableDemo() {
         );
       },
       cell: ({ row }) => (
-        <div className="justify-middle">
-          {row.getValue("status") === "TO_REVIEW" && (
-            <Eye className="text-blue-500" />
-          )}
+        <div className="ml-3 group">
+          <Tooltip>
+            <TooltipTrigger asChild>
+              {row.getValue("status") === "TO_REVIEW" && (
+                <Eye className="text-blue-500" />
+              )}
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>TO_REVIEW</p>
+            </TooltipContent>
+          </Tooltip>
         </div>
       ),
     },

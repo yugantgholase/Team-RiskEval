@@ -1,5 +1,13 @@
 import React from "react";
-import { FolderRoot, GitBranch, Download } from "lucide-react";
+import {
+  FolderRoot,
+  GitBranch,
+  Download,
+  DownloadCloud,
+  Cloud,
+} from "lucide-react";
+import { BsFiletypePdf } from "react-icons/bs";
+import { IoIosGitBranch } from "react-icons/io";
 import { getProjectDetails, useQueryParams } from "@/hooks/dashboard.hooks";
 import { useLocation } from "react-router";
 import {
@@ -7,7 +15,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -17,18 +24,6 @@ import {
 } from "@/components/ui/select";
 
 const projectDetails = getProjectDetails();
-const stats = [
-  {
-    icon: <FolderRoot className="h-6 w-6 " />,
-    name: projectDetails?.projectName,
-    label: "Project Name",
-  },
-  {
-    icon: <GitBranch className="h-6 w-6 " />,
-    name: projectDetails?.branchName,
-    label: "Branch Name",
-  },
-];
 const ProjectHeader = () => {
   const location = useLocation();
   const { projectName, projectBranch } = useQueryParams();
@@ -39,7 +34,7 @@ const ProjectHeader = () => {
       label: "Project Name",
     },
     {
-      icon: <GitBranch className="h-6 w-6 " />,
+      icon: <IoIosGitBranch className="h-6 w-6 " />,
       name: projectBranch ?? projectDetails?.branchName,
       label: "Branch Name",
     },
@@ -70,9 +65,6 @@ const ProjectHeader = () => {
                     >
                       {stat.name}
                     </SelectItem>
-                    {/* <SelectItem value="others" className="rounded-lg">
-                      Others...
-                    </SelectItem> */}
                   </SelectContent>
                 </Select>
               </div>
@@ -90,9 +82,12 @@ const ProjectHeader = () => {
             <a
               href="/Vulnerability_Report.pdf"
               download
-              className="align-middle group"
+              className="align-middle group mr-3"
             >
-              <Download size={22} className="group-hover:text-purple-800 " />
+              <BsFiletypePdf
+                size={25}
+                className="group-hover:text-purple-800 "
+              />
             </a>
           </TooltipTrigger>
           <TooltipContent>
